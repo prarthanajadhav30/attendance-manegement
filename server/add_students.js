@@ -14,7 +14,7 @@ const addStudents = async () => {
         classId,
         section,
         rollNumber: i,
-      },
+      }, 
     };
 
     try {

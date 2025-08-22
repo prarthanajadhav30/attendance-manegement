@@ -8,8 +8,9 @@ const sidebarConfig = {
       { label: "Dashboard", icon: "🏠", path: "/admin" },
       { label: "Students", icon: "👤", path: "/admin/students" },
       { label: "Teachers", icon: "👩‍🏫", path: "/admin/teachers" },
+      { label: "Schedule", icon: "✏️", path: "/admin/schedule" },
       { label: "Classes", icon: "🏫", path: "/admin/classes" },
-    //   { label: "Reports", icon: "📊", path: "/admin/reports" },
+       { label: "Reports", icon: "📊", path: "/admin/reports" },
     //   { label: "Settings", icon: "⚙️", path: "/admin/settings" },
     ],
   },
@@ -18,8 +19,8 @@ const sidebarConfig = {
     links: [
       { label: "Dashboard", icon: "🏠", path: "/teacher" },
       { label: "Take Attendance", icon: "📝", path: "/teacher/attendance" },
-    //   { label: "Classes", icon: "🏫", path: "/teacher/classes" },
-    //   { label: "Reports", icon: "📊", path: "/teacher/reports" },
+       { label: "Classes", icon: "🏫", path: "/teacher/classes" },
+      { label: "Report", icon: "📊", path: "/teacher/report" },
     //   { label: "Settings", icon: "⚙️", path: "/teacher/settings" },
     ],
   },
@@ -28,8 +29,10 @@ const sidebarConfig = {
     links: [
       { label: "Dashboard", icon: "🏠", path: "/student" },
       { label: "My Attendance", icon: "📅", path: "/student/attendance" },
-    //   { label: "Profile", icon: "👤", path: "/student/profile" },
-    //   { label: "Settings", icon: "⚙️", path: "/student/settings" },
+     { label: "Profile", icon: "👤", path: "/student/profile" },
+      { label: "Syllabus", icon: "📚", path: "/student/syllabus" },
+      { label: "Schedule", icon: "📅", path: "/student/schedule" },
+
     ],
   },
 };

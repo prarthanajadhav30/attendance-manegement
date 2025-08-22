@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css';
 import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import ThemeLayout from "./components/ThemeLayout";
 import HomePage from "./pages/HomePage";
@@ -16,6 +17,12 @@ import NotFoundPage from "./pages/NotFoundPage";
 import StudentPage from "./pages/StudentPage";
 import StudentAttendance from "./pages/StudentAttendance";
 import LoginPage from "./pages/LoginPage";
+import AdminSchedule from "./pages/AdminSchedule";
+import StudentSyllabus from "./pages/StudentSyllabus";
+import StudentSchedule from "./pages/StudentSchedule";
+import StudentProfile from "./pages/StudentProfile";
+import TeacherClasses from "./pages/TeacherClasses";
+import TeacherReport from "./pages/TeacherReport";
 
 function App() {
   return (
@@ -32,16 +39,19 @@ function App() {
             <Route path="add-teacher" element={<AdminCreateTeacher />} />
             <Route path="reports" element={<AdminReports />} />
             <Route path="settings" element={<AdminSettings />} />
+            <Route path="schedule" element={<AdminSchedule />} />
           </Route>
           <Route path="/teacher" element={<TeacherPage />}>
             <Route path="attendance" element={<TeacherAttendance />} />
-            <Route path="classes" element={<div>Classes</div>} />
-            <Route path="reports" element={<div>Reports</div>} />
+            <Route path="classes" element={<TeacherClasses/>} />
+            <Route path="report" element={<TeacherReport />} />
             <Route path="settings" element={<div>Settings</div>} />
           </Route>
           <Route path="/student" element={<StudentPage />} >
-            <Route path="attendance" element={<StudentAttendance />} />
-            <Route path="profile" element={<div>Profile</div>} />
+            <Route path="attendance" element={<StudentAttendance />} />\
+            <Route path="syllabus" element={<StudentSyllabus />} />
+            <Route path="schedule" element={<StudentSchedule />} />
+            <Route path="profile" element={<StudentProfile /> }/>
             <Route path="settings" element={<div>Settings</div>} />
           </Route>
           <Route path="/login" element={<LoginPage />} />

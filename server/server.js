@@ -19,6 +19,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 const logger = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
 app.use(logger);
+app.get("/", (req, res) => {
+  res.send("Backend is running ✅");
+});
+
 app.use('/api', require('./routes/index'));
 app.use(errorHandler);
 
